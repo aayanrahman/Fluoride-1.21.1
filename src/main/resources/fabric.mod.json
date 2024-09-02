@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fluoride",
+	"version": "${version}",
+	"name": "fluoride",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Realjs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/fluoride/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.realjs.fluoride.Fluoride"
+		],
+		"fabric-datagen": [
+			"net.realjs.fluoride.FluorideDataGenerator"
+		],
+		"client": [
+			"net.realjs.fluoride.FluorideModClient"
+		]
+	},
+	"mixins": [
+		"fluoride.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
