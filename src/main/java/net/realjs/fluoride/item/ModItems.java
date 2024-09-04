@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
+    public static final Item RED_RUBY = registerItem("red_ruby", new Item(new Item.Settings()));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Fluoride.MOD_ID, name), item);
@@ -20,6 +22,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PINK_GARNET);
+            entries.add(RED_RUBY);
         });
     }
 }
